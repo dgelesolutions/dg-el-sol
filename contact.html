@@ -26,6 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -215,16 +216,16 @@
                         </div>
 
                         <div class="form-panel-right">
-                            <form class="terminal-form" id="dgesContactForm">
+                            <form class="terminal-form" id="gform">
 
                                 <div class="form-row">
                                     <div class="input-group">
-                                        <input type="text" id="fullName" required placeholder=" ">
+                                        <input type="text" id="fullName" name="fullName" required placeholder=" ">
                                         <label for="fullName">Full Name</label>
                                         <div class="input-line"></div>
                                     </div>
                                     <div class="input-group">
-                                        <input type="text" id="companyName" required placeholder=" ">
+                                        <input type="text" id="companyName" name="companyName" required placeholder=" ">
                                         <label for="companyName">Company / Entity</label>
                                         <div class="input-line"></div>
                                     </div>
@@ -232,12 +233,12 @@
 
                                 <div class="form-row">
                                     <div class="input-group">
-                                        <input type="email" id="emailAdd" required placeholder=" ">
+                                        <input type="email" id="emailAdd" name="email" required placeholder=" ">
                                         <label for="emailAdd">Business Email</label>
                                         <div class="input-line"></div>
                                     </div>
                                     <div class="input-group">
-                                        <select id="projectScale" required>
+                                        <select id="projectScale" name="projectScale" required>
                                             <option value="" disabled selected></option>
                                             <option value="commercial">Commercial Development</option>
                                             <option value="industrial">Heavy Industrial</option>
@@ -250,8 +251,8 @@
                                 </div>
 
                                 <div class="input-group full-width">
-                                    <textarea id="projectSpecs" rows="4" required placeholder=" "></textarea>
-                                    <label for="projectSpecs">Technical Requirements & Export Destination</label>
+                                    <textarea id="projectSpecs" name="projectSpecs" rows="4" required placeholder=" "></textarea>
+                                    <label for="projectSpecs">Technical Requirements</label>
                                     <div class="input-line"></div>
                                 </div>
 
@@ -264,6 +265,7 @@
                                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                                         </svg>
                                     </button>
+                                    <p id="submit-alert"></p>
                                 </div>
 
                             </form>
@@ -281,6 +283,33 @@
 
     <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $("#gform").submit((e) => {
+            e.preventDefault();
+            $("#submit-alert").html("Submitting...<br>Please wait").css({ "display": "contents", "color": "#003057", "font-weight": "900" });
+
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbwj2VSzW3T-hkj4HrvOvIISrbp9NDwJjhxmH1q_XNQqRuATNwkpYduAxwQgZHUqK6_iiQ/exec",
+                data: $("#gform").serialize(),
+                method: "post",
+                success: function(response) {
+                    $("#submit-alert").text("Form Submitted Successfully!!").css({ "display": "contents", "color": "#F3911F", "font-weight": "900" });
+                    // Fade out form and success message after 5 seconds
+                    setTimeout(function() {
+                        $("#gform, #submit-alert").fadeOut(800, function() {
+                            $("#gform").trigger("reset").fadeIn(800);
+                            $("#submit-alert").text("").fadeIn(800);
+                        });
+                    }, 5000);
+                },
+                error: function(err) {
+                    $("#submit-alert").text("Something Went Wrong!..Check filled details are correct and Submit again or Please try Contacting through WhatsApp or Mobile Number")
+                        .css({ "display": "contents", "color": "red", "font-weight": "900" });
+                }
+            });
+        });
+            
+    </script>
 </body>
 
 </html>

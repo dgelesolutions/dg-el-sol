@@ -1,0 +1,14 @@
+# DGES Website
+
+This website provides information about the DGES business. It features a modern design using HTML, CSS, JavaScript, GSAP, and Three.js for 3D elements and animations.
+
+## Site Structure
+
+- /index.html : Home page, containing the primary entrance and overview.
+- /about.html : About Us, detailing the company's background and mission.
+- /certificates.html : Certifications and awards section.
+- /contact.html : Contact information and form.
+- /equipment.html : Descriptions of available equipment and tools.
+- /structure.html : Company structure or organizational information.
+
+For any specific content, please refer to the individual HTML files.
