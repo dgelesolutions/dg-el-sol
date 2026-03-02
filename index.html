@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGES | Global Exporter of Electrical Equipment & Infrastructure</title>
+    <meta name="description"
+        content="DGES is a premier exporter of heavy-duty electrical equipment, transformers, switchgears, and cables from ISO-certified Indian manufacturers to power grids worldwide.">
+    <meta name="keywords"
+        content="electrical equipment export, power transformers, industrial switchgears, electrical cables, global electrical infrastructure, DGES">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DGES | Global Exporter of Electrical Equipment">
+    <meta property="og:description"
+        content="DGES is a premier exporter of heavy-duty electrical equipment to power grids worldwide.">
+    <meta property="og:url" content="https://dges.com/">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="liquid-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="grid-overlay"></div>
+
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="turbine-hero-section ">
+
+        <!-- <div class="hero-fog"></div> -->
+        <!-- <div class="hero-grid-lines"></div> -->
+
+        <div class="hero-container">
+
+            <div class="hero-interface gs-hero-reveal mt-3">
+
+                <!-- <div class="status-badge">
+                    <span class="pulse-ring"></span>
+                    SYSTEM: ONLINE
+                </div> -->
+
+                <h1 class="hero-title">
+                    ENGINEERING <br>
+                    <span class="text-glow">GLOBAL GRID.</span>
+                </h1>
+
+                <p class="hero-description">
+                    The definitive link between India's elite manufacturing and the world's most critical
+                    infrastructure. We source, engineer, and export heavy-duty power systems with zero compromise.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="equipment.html" class="btn-primary-glow">
+                        <span class="btn-content">Explore Equipment</span>
+                        <div class="btn-shine"></div>
+                    </a>
+                    <a href="about.html" class="btn-secondary-glass">
+                        Corporate Identity
+                    </a>
+                </div>
+
+                <div class="telemetry-row">
+                    <div class="telemetry-item">
+                        <span class="t-label">Grid Load</span>
+                        <span class="t-value">500 MVA</span>
+                    </div>
+                    <div class="telemetry-divider"></div>
+                    <div class="telemetry-item">
+                        <span class="t-label">Efficiency</span>
+                        <span class="t-value">99.8%</span>
+                    </div>
+                    <div class="telemetry-divider"></div>
+                    <div class="telemetry-item">
+                        <span class="t-label">Export Reach</span>
+                        <span class="t-value">Global</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-visual mt-8">
+                <div id="turbine-canvas"></div>
+
+                <div class="visual-glass-card gs-float-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <div class="card-text">
+                        <strong>ISO 9001</strong>
+                        <span>Compliance Verified</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="premium-about">
+        <div class="about-glass-card">
+
+            <div class="tech-corner top-left"></div>
+            <div class="tech-corner bottom-right"></div>
+
+            <div class="about-layout">
+
+                <div class="about-text-wrapper">
+                    <div class="blueprint-tag about-anim-text">
+                        <span class="pulse-dot"></span> 01 // CORPORATE IDENTITY
+                    </div>
+
+                    <h2 class="about-headline about-anim-text">
+                        Bridging India's<br>
+                        Manufacturing With<br>
+                        <span class="text-gradient">Global Demands.</span>
+                    </h2>
+
+                    <p class="about-description about-anim-text">
+                        DGES bypasses traditional supply chain friction. We act as your direct, engineered conduit to
+                        India's most advanced electrical manufacturing facilities. We source, vet, and export heavy-duty
+                        infrastructure components built to uncompromising international ISO standards.
+                    </p>
+
+                    <div class="about-metrics">
+                        <div class="metric about-anim-text">
+                            <div class="metric-val">15<span class="metric-plus">+</span></div>
+                            <div class="metric-label">Countries Served</div>
+                        </div>
+                        <div class="metric about-anim-text">
+                            <div class="metric-val">100<span class="metric-plus">%</span></div>
+                            <div class="metric-label">Export Grade</div>
+                        </div>
+                        <div class="metric about-anim-text">
+                            <div class="metric-val">ISO</div>
+                            <div class="metric-label">Certified Partners</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual-cluster">
+
+                    <div class="cluster-img main-img cluster-anim" data-speed="0.05">
+                        <img src="assets/images/cluster-hv-substation.png" alt="Power Grid">
+                        <div class="glass-overlay-label">HIGH VOLTAGE</div>
+                    </div>
+
+                    <div class="cluster-img sub-img-1 cluster-anim" data-speed="-0.1">
+                        <img src="assets/images/cluster-switchgear-room.png" alt="Switchgear Room">
+                    </div>
+
+                    <div class="rotating-blueprint cluster-anim" data-speed="0.15">
+                        <svg viewBox="0 0 100 100" class="spin-slow">
+                            <circle cx="50" cy="50" r="48" fill="none" stroke="var(--primary-blue)" stroke-width="0.5"
+                                stroke-dasharray="4 4" />
+                            <circle cx="50" cy="50" r="35" fill="none" stroke="var(--accent-amber)" stroke-width="1"
+                                stroke-dasharray="10 5" />
+                            <line x1="50" y1="0" x2="50" y2="100" stroke="var(--primary-blue)" stroke-width="0.5"
+                                opacity="0.5" />
+                            <line x1="0" y1="50" x2="100" y2="50" stroke="var(--primary-blue)" stroke-width="0.5"
+                                opacity="0.5" />
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Section -->
+    <section class="horizontal-section">
+        <div class="horizontal-container">
+
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">01 / DISTRIBUTION TRANSFORMERS</div>
+                        <h2 class="panel-title">High-Capacity Transformers.</h2>
+                        <p class="panel-desc">The backbone of any grid. We supply distribution and power transformers
+                            engineered to handle extreme loads and diverse climatic conditions. Built for maximum
+                            efficiency with minimum core losses — keeping global energy infrastructure moving
+                            seamlessly from substation to endpoint.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/distribution-transformer.png" class="horiz-img"
+                            alt="Distribution Transformer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">02 / INSTRUMENT TRANSFORMERS</div>
+                        <h2 class="panel-title">Precision Measurement.</h2>
+                        <p class="panel-desc">Current transformers and voltage transformers built for accuracy at scale.
+                            Our instrument transformers enable reliable metering, protection, and control across
+                            high-voltage networks — ensuring operators maintain complete visibility
+                            over every watt flowing through the grid.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/instrument-transformers.png" class="horiz-img"
+                            alt="Instrument Transformers">
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">03 / CABLES & CONDUCTORS</div>
+                        <h2 class="panel-title">Heavy-Duty Cabling.</h2>
+                        <p class="panel-desc">From high-voltage power cables to armoured conductors, we source and
+                            supply
+                            the full spectrum of industrial-grade cabling. Multi-core, XLPE insulated, and rated
+                            for the harshest conditions — delivering reliable power transmission from
+                            generation point to final distribution.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/industrial-cables.png" class="horiz-img"
+                            alt="Industrial Cables & Conductors">
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">04 / BATTERY ENERGY STORAGE</div>
+                        <h2 class="panel-title">Grid-Scale Storage.</h2>
+                        <p class="panel-desc">Bridging generation and demand. We supply complete Battery Energy Storage
+                            Systems
+                            (BESS) engineered for utility-scale deployment. Lithium-ion and advanced chemistries
+                            that enable peak shaving, frequency regulation, and seamless renewable
+                            integration into existing power infrastructure.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/battery-storage.png" class="horiz-img"
+                            alt="Battery Energy Storage System">
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">05 / INDUSTRIAL RELAYS</div>
+                        <h2 class="panel-title">Intelligent Protection.</h2>
+                        <p class="panel-desc">From control relays to high-capacity power relays for AC and DC loads.
+                            Our relay portfolio covers latching, ratchet, I/O, and terminal configurations —
+                            providing the critical switching intelligence that safeguards electrical circuits
+                            and automates industrial control systems worldwide.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/industrial-relays.png" class="horiz-img"
+                            alt="Industrial Relays">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel panel-cta">
+                <a href="equipment.html" class="panel-cta-link">
+                    <span class="panel-cta-text">View All Products</span>
+                    <svg class="panel-cta-arrow" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- <div class="panel"> 
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">06 / METERS & INDICATORS</div>
+                        <h2 class="panel-title">Complete Visibility.</h2>
+                        <p class="panel-desc">Precision analog and digital panel meters, ammeters, voltmeters,
+                            and LED indicator lights. Our metering solutions deliver real-time electrical
+                            parameter monitoring — giving operators instant, accurate insight into
+                            current, voltage, and system health at every distribution point.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/electrical-meters.png" class="horiz-img"
+                            alt="Meters & Indicators">
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <div class="panel-number">07 / INDUSTRIAL SWITCHES</div>
+                        <h2 class="panel-title">Total Control.</h2>
+                        <p class="panel-desc">Toggle, rotary, push-button, rocker, DIP, and solid-state switches
+                            built for industrial-grade durability. From micro-switches to heavy-duty cam switches —
+                            every actuation point engineered for millions of cycles in the most
+                            demanding operational environments.</p>
+                    </div>
+                    <div class="panel-image-wrapper">
+                        <div class="crosshair ch-tl"></div>
+                        <div class="crosshair ch-br"></div>
+                        <img src="assets/images/products/industrial-switches.png" class="horiz-img"
+                            alt="Industrial Switches">
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section section-padding">
+        <div class="why-container">
+
+            <div class="section-header gs-fade-up ">
+                <div class="blueprint-tag">
+                    <span class="pulse-dot"></span> THE DGES ADVANTAGE
+                </div>
+                <h2 class="why-title">Not Resellers. <span>Export Specialists.</span></h2>
+            </div>
+
+            <div class="why-dashboard gs-fade-up">
+
+                <div class="why-list">
+
+                    <div class="why-item active" data-target="img-source">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="50" height="50">
+                                <circle class="progress-ring__bg" stroke="rgba(0, 48, 87, 0.1)" stroke-width="4"
+                                    fill="transparent" r="22" cx="25" cy="25" />
+                                <circle class="progress-ring__circle progress-fill" stroke="var(--accent-amber)"
+                                    stroke-width="4" fill="transparent" r="22" cx="25" cy="25" />
+                            </svg>
+                            <div class="item-number">01</div>
+                        </div>
+                        <div class="item-content">
+                            <h3>Direct Manufacturing Access</h3>
+                            <p>We bypass middlemen. DGES holds direct partnerships with India's top-tier, ISO-certified
+                                manufacturing floors, ensuring pure quality control from raw copper to finished panel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="why-item" data-target="img-export">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="50" height="50">
+                                <circle class="progress-ring__bg" stroke="rgba(0, 48, 87, 0.1)" stroke-width="4"
+                                    fill="transparent" r="22" cx="25" cy="25" />
+                                <circle class="progress-ring__circle progress-fill" stroke="var(--accent-amber)"
+                                    stroke-width="4" fill="transparent" r="22" cx="25" cy="25" />
+                            </svg>
+                            <div class="item-number">02</div>
+                        </div>
+                        <div class="item-content">
+                            <h3>Engineered For Export</h3>
+                            <p>International compliance isn't an afterthought. We handle end-to-end export logistics,
+                                custom maritime packaging, and stringent multi-national regulatory compliance.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item" data-target="img-qa">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="50" height="50">
+                                <circle class="progress-ring__bg" stroke="rgba(0, 48, 87, 0.1)" stroke-width="4"
+                                    fill="transparent" r="22" cx="25" cy="25" />
+                                <circle class="progress-ring__circle progress-fill" stroke="var(--accent-amber)"
+                                    stroke-width="4" fill="transparent" r="22" cx="25" cy="25" />
+                            </svg>
+                            <div class="item-number">03</div>
+                        </div>
+                        <div class="item-content">
+                            <h3>Uncompromising QA</h3>
+                            <p>Every transformer, switchgear, and cable undergoes rigorous international standard
+                                testing before it ever enters a shipping container. Zero tolerance for failure.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item" data-target="img-scale">
+                        <div class="progress-ring-container">
+                            <svg class="progress-ring" width="50" height="50">
+                                <circle class="progress-ring__bg" stroke="rgba(0, 48, 87, 0.1)" stroke-width="4"
+                                    fill="transparent" r="22" cx="25" cy="25" />
+                                <circle class="progress-ring__circle progress-fill" stroke="var(--accent-amber)"
+                                    stroke-width="4" fill="transparent" r="22" cx="25" cy="25" />
+                            </svg>
+                            <div class="item-number">04</div>
+                        </div>
+                        <div class="item-content">
+                            <h3>Massive Volume Capacity</h3>
+                            <p>Whether you are powering a single commercial complex or outfitting a national utility
+                                grid, our sourcing network scales to meet massive volume demands instantly.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="why-visualizer">
+                    <div class="crosshair ch-tl"></div>
+                    <div class="crosshair ch-br"></div>
+
+                    <div class="visual-glass-pane">
+                        <img id="img-source" src="assets/images/products/why-manufacturing.png" class="viz-img active"
+                            alt="Direct Manufacturing">
+                        <img id="img-export" src="assets/images/products/why-export-logistics.png" class="viz-img"
+                            alt="Global Export Logistics">
+                        <img id="img-qa" src="assets/images/products/why-quality-assurance.png" class="viz-img"
+                            alt="Quality Assurance">
+                        <img id="img-scale" src="assets/images/products/why-scale-grid.png" class="viz-img"
+                            alt="Massive Scale Grid">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cta-wrapper gs-fade-up">
+                <a href="#" class="btn-glow">
+                    Talk to an Export Specialist
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <p class="cta-subtext">Get direct pricing and lead times for global deployment.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section section-padding">
+        <div class="industries-container">
+
+            <div class="section-header gs-fade-up">
+                <div class="blueprint-tag">
+                    <span class="pulse-dot"></span> SECTOR ALIGNMENT
+                </div>
+                <h2 class="section-title">Industries We Power.</h2>
+            </div>
+
+            <div class="glass-accordion gs-fade-up">
+                <div class="crosshair ch-tl"></div>
+                <div class="crosshair ch-br"></div>
+
+
+                <div class="acc-panel">
+                    <img src="assets/images/products/ind-heavy-mfg-01.png" class="acc-bg-img" alt="Heavy Manufacturing">
+                    <div class="acc-glass-overlay"></div>
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <div class="acc-number">01</div>
+                            <h3 class="acc-title">Heavy Manufacturing</h3>
+                        </div>
+                        <div class="acc-hidden-text">
+                            <p>Delivering robust industrial switchgears, motor control centers (MCC), and heavy-duty
+                                cabling designed to maintain absolute stability in volatile manufacturing environments.
+                            </p>
+                            <a href="#" class="explore-link">Explore Sector <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="acc-panel">
+                    <img src="assets/images/products/ind-heavy-mfg-02.png" class="acc-bg-img" alt="Heavy Manufacturing">
+                    <div class="acc-glass-overlay"></div>
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <div class="acc-number">02</div>
+                            <h3 class="acc-title">Heavy Manufacturing</h3>
+                        </div>
+                        <div class="acc-hidden-text">
+                            <p>Delivering robust industrial switchgears, motor control centers (MCC), and heavy-duty
+                                cabling designed to maintain absolute stability in volatile manufacturing environments.
+                            </p>
+                            <a href="#" class="explore-link">Explore Sector <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acc-panel">
+                    <img src="assets/images/products/ind-commercial.png" class="acc-bg-img"
+                        alt="Commercial Real Estate">
+                    <div class="acc-glass-overlay"></div>
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <div class="acc-number">03</div>
+                            <h3 class="acc-title">Commercial Infrastructure</h3>
+                        </div>
+                        <div class="acc-hidden-text">
+                            <p>Precision power distribution panels and smart metering solutions engineered for
+                                large-scale commercial complexes, ensuring efficiency and safety across massive square
+                                footage.</p>
+                            <a href="#" class="explore-link">Explore Sector <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acc-panel">
+                    <img src="assets/images/products/ind-renewable.png" class="acc-bg-img" alt="Renewable Energy">
+                    <div class="acc-glass-overlay"></div>
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <div class="acc-number">04</div>
+                            <h3 class="acc-title">Renewable Integration</h3>
+                        </div>
+                        <div class="acc-hidden-text">
+                            <p>Crucial interfacing equipment, advanced relays, and inverters required to seamlessly tie
+                                large-scale solar arrays and wind farms into existing international power grids.</p>
+                            <a href="#" class="explore-link">Explore Sector <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="acc-panel">
+                    <img src="assets/images/products/ind-battery-storage.png" class="acc-bg-img"
+                        alt="Battery Energy Storage">
+                    <div class="acc-glass-overlay"></div>
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <div class="acc-number">05</div>
+                            <h3 class="acc-title">Battery Energy Storage</h3>
+                        </div>
+                        <div class="acc-hidden-text">
+                            <p>Complete BESS solutions engineered for utility-scale deployment. Lithium-ion and advanced
+                                chemistries that enable peak shaving, frequency regulation, and seamless renewable
+                                integration into existing power infrastructure.</p>
+                            <a href="#" class="explore-link">Explore Sector <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="acc-panel">
+                    <img src="assets/images/products/ind-relays.png" class="acc-bg-img" alt="Industrial Relays">
+                    <div class="acc-glass-overlay"></div>
+                    <div class="acc-content">
+                        <div class="acc-header">
+                            <div class="acc-number">06</div>
+                            <h3 class="acc-title">Industrial Relays</h3>
+                        </div>
+                        <div class="acc-hidden-text">
+                            <p>From control relays to high-capacity power relays for AC and DC loads. Our relay
+                                portfolio
+                                covers latching, ratchet, I/O, and terminal configurations — providing the critical
+                                switching intelligence that safeguards electrical circuits and automates industrial
+                                control systems worldwide.</p>
+                            <a href="#" class="explore-link">Explore Sector <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Global Matrix Section -->
+    <section class="global-matrix-section section-padding">
+        <div class="global-glass-container">
+            <div class="crosshair ch-tl"></div>
+            <div class="crosshair ch-br"></div>
+
+            <div class="global-layout">
+
+                <div class="global-text-side">
+                    <div class="blueprint-tag">
+                        <span class="pulse-dot"></span> BORDERLESS LOGISTICS
+                    </div>
+                    <h2 class="global-title">Powering infrastructure across <span>Continents.</span></h2>
+                    <p class="global-desc">
+                        Interact with the globe to explore our network. From electrifying commercial hubs in the Middle
+                        East to powering heavy utility grids across Africa and Europe, DGES ensures your equipment
+                        arrives on time, fully compliant, and ready to deploy.
+                    </p>
+
+                    <div class="live-stats">
+                        <div class="stat-block gs-fade-up">
+                            <div class="stat-val">45+</div>
+                            <div class="stat-label">Active Ports</div>
+                        </div>
+                        <div class="stat-block gs-fade-up">
+                            <div class="stat-val">100%</div>
+                            <div class="stat-label">Customs Cleared</div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn-glow mt-4 gs-fade-up">
+                        Check Export Capability
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 16 16 12 12 8"></polyline>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="global-map-side">
+                    <div id="globe-canvas-container">
+                        <div id="label-india" class="glass-tag hub-tag">
+                            <div class="tag-status-dot pulse"></div>
+                            <div class="tag-title">India HQ</div>
+                        </div>
+
+                        <div id="label-eu" class="glass-tag">
+                            <div class="tag-status-dot"></div>
+                            <div class="tag-title">Europe</div>
+                        </div>
+
+                        <div id="label-me" class="glass-tag">
+                            <div class="tag-status-dot"></div>
+                            <div class="tag-title">Middle East</div>
+                        </div>
+
+                        <div id="label-af" class="glass-tag">
+                            <div class="tag-status-dot"></div>
+                            <div class="tag-title">Africa</div>
+                        </div>
+
+                        <div id="label-am" class="glass-tag">
+                            <div class="tag-status-dot"></div>
+                            <div class="tag-title">Americas</div>
+                        </div>
+
+                        <div id="label-sa" class="glass-tag">
+                            <div class="tag-status-dot"></div>
+                            <div class="tag-title">SE Asia</div>
+                        </div>
+                    </div>
+                    <div class="interaction-hint gs-fade-up">Drag to Rotate Globe</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Contact Form -->
+    <section class="enquiry-section section-padding" id="enquiry">
+        <div class="enquiry-glass-container gs-fade-up">
+            <div class="crosshair ch-tl"></div>
+            <div class="crosshair ch-br"></div>
+
+            <div class="enquiry-layout">
+
+                <!-- Left: Info Side -->
+                <div class="enquiry-info">
+                    <div class="blueprint-tag">
+                        <span class="pulse-dot"></span> GET IN TOUCH
+                    </div>
+                    <h2 class="enquiry-headline">Let's Power Your <span class="text-gradient">Next Project.</span></h2>
+                    <p class="enquiry-desc">Fill out the form and our technical team will get back to you within 24
+                        hours with a customized quotation for your requirements.</p>
+                </div>
+
+                <!-- Right: Form Side -->
+                <div class="enquiry-form-wrapper">
+                    <form class="terminal-form" id="enquiry-form" onsubmit="return false;">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" id="enq-name" name="name" required placeholder=" ">
+                                <label for="enq-name">Full Name *</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="enq-email" name="email" required placeholder=" ">
+                                <label for="enq-email">Email Address *</label>
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="tel" id="enq-phone" name="phone" placeholder=" ">
+                                <label for="enq-phone">Phone Number</label>
+                                <div class="input-line"></div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="enq-company" name="company" placeholder=" ">
+                                <label for="enq-company">Company Name</label>
+                                <div class="input-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <select id="enq-product" name="product" required>
+                                <option value="" disabled selected></option>
+                                <option value="transformers">Distribution Transformers</option>
+                                <option value="instrument-transformers">Instrument Transformers</option>
+                                <option value="cables">Cables & Conductors</option>
+                                <option value="bess">Battery Energy Storage (BESS)</option>
+                                <option value="relays">Industrial Relays</option>
+                                <option value="switchgear">Switchgear & Panels</option>
+                                <option value="other">Other / Custom Requirement</option>
+                            </select>
+                            <label for="enq-product">Product of Interest</label>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <textarea id="enq-message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="enq-message">Project Details *</label>
+                            <div class="input-line"></div>
+                        </div>
+
+                        <div class="form-actions mt-lg-3">
+                            <button type="submit" class="btn-glow submit-btn">
+                                <span class="btn-text">Submit Enquiry</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+
+    <section class="cta-section section-padding mt-lg-3">
+        <div class="cta-energy-blob"></div>
+
+        <div class="cta-container gs-scale-up">
+            <div class="crosshair ch-tl"></div>
+            <div class="crosshair ch-br"></div>
+            <div class="crosshair ch-tr"></div>
+            <div class="crosshair ch-bl"></div>
+
+            <div class="cta-content">
+                <div class="blueprint-tag">
+                    <span class="pulse-dot"></span> INITIATE PROJECT
+                </div>
+
+                <h2 class="cta-headline">Need Reliable Electrical Equipment for Your Project?</h2>
+                <p class="cta-subtext">Bypass the standard supply chain. Partner with DGES for direct manufacturing
+                    access, uncompromising QA, and seamless global export.</p>
+
+                <div class="cta-action-area">
+                    <a href="#" class="btn-mega">
+                        Get a Quotation in 24 Hours
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        ISO Certified Partners
+                    </div>
+                    <div class="trust-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        End-to-End Export Logistics
+                    </div>
+                    <div class="trust-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Dedicated Technical Support
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
