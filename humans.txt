@@ -1,0 +1,13 @@
+/* TEAM */
+
+  Designer & Developer: Mohammed Nihal
+  LinkedIn: https://www.linkedin.com/in/m-nihal13
+  GitHub: https://github.com/mnihal-13
+
+  Design Studio: Prception
+  Website: https://prception.in
+
+/* SITE */
+  Last update: 2026-03-03
+  Language: English
+  Doctype: HTML5

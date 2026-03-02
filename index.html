@@ -26,6 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -683,15 +684,15 @@
 
                 <!-- Right: Form Side -->
                 <div class="enquiry-form-wrapper">
-                    <form class="terminal-form" id="enquiry-form" onsubmit="return false;">
+                    <form class="terminal-form" id="gform">
                         <div class="form-row">
                             <div class="input-group">
-                                <input type="text" id="enq-name" name="name" required placeholder=" ">
-                                <label for="enq-name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Full Name *</label>
                                 <div class="input-line"></div>
                             </div>
                             <div class="input-group">
-                                <input type="email" id="enq-email" name="email" required placeholder=" ">
+                                <input type="email" id="email" name="email" required placeholder=" ">
                                 <label for="enq-email">Email Address *</label>
                                 <div class="input-line"></div>
                             </div>
@@ -699,19 +700,19 @@
 
                         <div class="form-row">
                             <div class="input-group">
-                                <input type="tel" id="enq-phone" name="phone" placeholder=" ">
-                                <label for="enq-phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder=" ">
+                                <label for="phone">Phone Number</label>
                                 <div class="input-line"></div>
                             </div>
                             <div class="input-group">
-                                <input type="text" id="enq-company" name="company" placeholder=" ">
+                                <input type="text" id="company" name="company" placeholder=" ">
                                 <label for="enq-company">Company Name</label>
                                 <div class="input-line"></div>
                             </div>
                         </div>
 
                         <div class="input-group full-width">
-                            <select id="enq-product" name="product" required>
+                            <select id="product" name="product" required>
                                 <option value="" disabled selected></option>
                                 <option value="transformers">Distribution Transformers</option>
                                 <option value="instrument-transformers">Instrument Transformers</option>
@@ -721,13 +722,13 @@
                                 <option value="switchgear">Switchgear & Panels</option>
                                 <option value="other">Other / Custom Requirement</option>
                             </select>
-                            <label for="enq-product">Product of Interest</label>
+                            <label for="product">Product of Interest</label>
                             <div class="input-line"></div>
                         </div>
 
                         <div class="input-group full-width">
-                            <textarea id="enq-message" name="message" rows="4" required placeholder=" "></textarea>
-                            <label for="enq-message">Project Details *</label>
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Project Details *</label>
                             <div class="input-line"></div>
                         </div>
 
@@ -740,6 +741,7 @@
                                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                                 </svg>
                             </button>
+                            <p id="submit-alert"></p>
                         </div>
                     </form>
                 </div>
@@ -810,6 +812,33 @@
 
     <script src="assets/js/components.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $("#gform").submit((e) => {
+            e.preventDefault();
+            $("#submit-alert").html("Submitting...<br>Please wait").css({ "display": "contents", "color": "#003057", "font-weight": "900" });
+
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbyo8DlKm5B6OvsRCjD5bT6GCtWfOa-_kNyh9B923dAmRicUy74R3XsrakShbZlOgJS1/exec",
+                data: $("#gform").serialize(),
+                method: "post",
+                success: function(response) {
+                    $("#submit-alert").text("Form Submitted Successfully!!").css({ "display": "contents", "color": "#F3911F", "font-weight": "900" });
+                    // Fade out form and success message after 5 seconds
+                    setTimeout(function() {
+                        $("#gform, #submit-alert").fadeOut(800, function() {
+                            $("#gform").trigger("reset").fadeIn(800);
+                            $("#submit-alert").text("").fadeIn(800);
+                        });
+                    }, 5000);
+                },
+                error: function(err) {
+                    $("#submit-alert").text("Something Went Wrong!..Check filled details are correct and Submit again or Please try Contacting through WhatsApp or Mobile Number")
+                        .css({ "display": "contents", "color": "red", "font-weight": "900" });
+                }
+            });
+        });
+            
+    </script>
 </body>
 
 </html>
