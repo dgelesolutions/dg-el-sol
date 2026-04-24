@@ -1,6 +1,6 @@
 # DGES Website
 
-This website provides information about the DGES business. It features a modern design using HTML, CSS, JavaScript, GSAP, and Three.js for 3D elements and animations.
+This website provides information about the DGES business. It features a modern design using HTML, CSS, JavaScript, GSAP, and Three.js.
 
 ## Site Structure
 
